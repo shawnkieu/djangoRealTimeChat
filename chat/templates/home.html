@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<div class="container position-absolute top-50 start-50 translate-middle">
+    <h2>Create a Chat Room</h2>
+    <form method="POST" action="checkview">
+      {%csrf_token%}
+      <div class="mb-3">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="room-name-input" name="room_name" placeholder="Room Name">
+      </div>
+        <input type="button" id="room-name-submit" value="Create">
+    </form>
+</div>
+{%endblock%}
